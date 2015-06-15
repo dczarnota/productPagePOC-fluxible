@@ -11,15 +11,35 @@ var pp_pageApp = React.createClass({
 
 	mixins: [ FluxibleMixin ],
 
+	/*
+	 * Whenever this component hears a change emitted from a store it is
+	 * listening to, it will execute the onChange handler function.
+	 */
+	// statics: {
+	//     storeListeners: [ ProductStore ]
+	// },
+
+	/*
+	 * Flux magic!
+	 *
+	 * A store emitted a change! Update the component's state with current
+	 * store data, which will trigger a re-render.
+	 */
+	// onChange: function() {
+	//     this.setState(this.getStore(ProductStore).getProducts());
+	// },
+
 	getInitialState:  function() {
     var data = this.getStore(ProductStore).getProducts()
+		// console.log('data: ',data);
     return {
     	data: data
     };
 	},
 
 	render: function() {
-		// console.log('this.state.data: ',this.state.data)
+		// console.log('pp_pageApp context: ',this.context);
+
 		return (
 			<div id="pageApp">
 				<div id="skinnyBanner"></div>

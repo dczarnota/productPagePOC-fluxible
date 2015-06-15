@@ -30,7 +30,7 @@ var Html = React.createClass({
 
         {/* Exposes dehydrated json state of all the stores as window.App */}
         <script dangerouslySetInnerHTML={{__html: this.props.state}}></script>
-        <script src="js/bundle.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/bundle.js" type="text/javascript" charSet="utf-8"></script>
       </html>
     )
   }

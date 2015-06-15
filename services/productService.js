@@ -53,7 +53,7 @@ module.exports = {
             log.info('Catalog item get call successful-->' + stopwatch.ms);
             //get only the First Item of the aarray
             data = data.d.Items[1];
-            log.info('Passing the rtaw data through filter to flatten the response-->' + stopwatch.ms);
+            log.info('Passing the raw data through filter to flatten the response-->' + stopwatch.ms);
 
             callback(null, data);
           } else {
@@ -169,6 +169,7 @@ module.exports = {
         // console.log('apiData: ', apiData);
         // res.render()
         // console.log('callback: ',callback)
+
         callback(null, apiData, metaTags);
       });
   }

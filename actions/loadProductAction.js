@@ -10,7 +10,7 @@ module.exports = function (context, payload, done) {
 
   // Create RSVP promise to fetch asynchronous data from the server
   var getProduct = new RSVP.Promise(function (resolve, reject) {
-
+    // var res = payload.navigate.res;
     /*
      * Call productService's read() with fetchr and handle the response
      * in callback. If the call succeeded, resolve the promise passing in
