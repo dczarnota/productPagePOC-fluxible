@@ -9,13 +9,16 @@ var rightComponent = React.createClass({
 
 	render: function() {
 		var priceData = this.props.priceData;
+
+		console.log('rightComponent: ',this.props.addToCart);
+
 		return (
 			<div className="rightComponent pure-u-1 pure-u-md-2-5 pure-u-sm-2-5">
 				<div className="rightComponentContainer pure-g">
 					<FramingOptions></FramingOptions>
 					<PriceComnponent priceData={priceData}></PriceComnponent>
 					<StaticTextComponent></StaticTextComponent>
-					<AddTocart_SaveToGal_Component></AddTocart_SaveToGal_Component>
+					<AddTocart_SaveToGal_Component addToCart={this.props.addToCart}></AddTocart_SaveToGal_Component>
 					<Helpline_Chat_Component></Helpline_Chat_Component>
 				</div>
 			</div>

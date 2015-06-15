@@ -37,6 +37,12 @@ var pp_pageApp = React.createClass({
     };
 	},
 
+	addToCart: function(e) {
+		e.preventDefault();
+		console.log('click');
+		return false;
+	},
+
 	render: function() {
 		// console.log('pp_pageApp context: ',this.context);
 
@@ -45,7 +51,7 @@ var pp_pageApp = React.createClass({
 				<div id="skinnyBanner"></div>
 				<Title titleData={this.state.data.title}></Title>
 				<Hero heroData={this.state.data.hero}></Hero>
-				<RightComponent priceData={this.state.data.price}></RightComponent>
+				<RightComponent priceData={this.state.data.price} addToCart={this.addToCart}></RightComponent>
 			</div>
 		);
 	}

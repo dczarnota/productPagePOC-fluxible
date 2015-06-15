@@ -12,21 +12,13 @@ var addTocart_SaveToGal_Component = React.createClass({
 	    storeListeners: [ ProductStore ]
 	},
 
-	addToCart: function(){
-		console.log('clicked');
-		context.executeAction(AddToCartAction, {title: 'Maroon Bells'}, function(err, result){
-			if(err){
-				console.log('err in executeAction.AddToCartAction. err: ',err);
-				return;
-			}
-		});
-	},
-
 	render: function() {
+		console.log('addToCart: ',this.props.addToCart);
+
 		return (
 			<div className="addTocart_SaveToGal_Component pure-u-1 pure-u-md-23-24">
 				<div className="addToCart btn pure-u-sm-3-5">
-					<a className="" href="">ADD TO CART</a>
+					<a className="" href="#" onClick={this.props.addToCart}>ADD TO CART</a>
 				</div>
 				<div className="addToGal">
 					<i className="fa fa-heart-o fa-2x"></i>

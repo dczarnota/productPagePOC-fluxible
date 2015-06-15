@@ -1,11 +1,10 @@
-// /** @jsx React.DOM */
+/** @jsx React.DOM */
 // require('node-jsx').install({extension: '.jsx'});
+var React = require('react');
 
-// var React = require('react');
-// var SkinnyBannerComponent = require('../../Components/skinnyBannerComponent.react');
-
+var SkinnyBannerComponent = require('../../Components/skinnyBannerComponent.react.jsx');
   
-// React.renderComponent(
-// 	<SkinnyBannerComponent/>,
-// 	document.getElementById('skinnyBanner')
-//     );
+React.renderComponent(
+	<SkinnyBannerComponent/>,
+	document.getElementById('skinnyBanner')
+);

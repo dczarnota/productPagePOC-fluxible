@@ -25,11 +25,11 @@ var ProductStore = createStore({
     return this.products;
   },
 
-  addToCart: function(item){
-    this.cart.push(item);
-    console.log('ProductStore addToCart cart: ', this.cart);
-    this.emitChange();
-  },
+  // addToCart: function(item){
+  //   this.cart.push(item);
+  //   console.log('ProductStore addToCart cart: ', this.cart);
+  //   this.emitChange();
+  // },
 
   /*
    * Update the store's internal state with the payload from an action.
