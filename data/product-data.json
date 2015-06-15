@@ -1,0 +1,21 @@
+{ 
+  "titleData":  { "title": "'The Maroon Bells in Autumn'",
+  "artist": "'Robbie George'",
+  "productType": "'Metal Print'",
+  "ProductPageUrl": "'http://www.art.com/products/p14212542129-sa-i8936349/robbie-the-maroon-bells-in-autumn.htm?upi=ap8936349_pc0_fi0_sv6_it1_vrv1&PodConfigID=5028723'",
+  "sku": "'14212542129A-5028723'" },
+
+"herodata":  { "smallImageUrl": "undefined",
+  "largeImageUrl": "'http://cache2.artprintimages.com/LRG/64/6410/72I9100Z.jpg'",
+  "largeImageWidth": "671",
+  "largeImageHeight": "894",
+  "mediumImageUrl": "'http://cache2.artprintimages.com/MED/64/6410/72I9100Z.jpg'",
+  "mediumImageWidth": "338",
+  "mediumImageHeight": "450",
+  "thumbnailImageUrl": "'http://imagecache5d.art.com/CropHandler/crop.jpg?img=64-6410-72I9100Z&x=0&y=0&w=400&h=400&size=2&maxw=100&maxh=100&mode=sq&q=100'",
+  "genericImageUrl": "'http://imgc.artprintimages.com/img/metal/art-print/robbie-george-the-maroon-bells-in-autumn_i-G-64-6410-72I9100Z.jpg'",
+  "watermarkerUrl": "'http://imgc.artprintimages.com/images/metal-print/robbie-george-the-maroon-bells-in-autumn_i-G-64-6410-72I9100Z.jpg'" },
+
+"rightComponentData":  { "displayPrice": "'$0.00'", "price": "'$99.99'", "arrivesBy": "'June 15'" }
+
+}

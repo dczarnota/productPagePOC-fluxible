@@ -1,0 +1,11 @@
+{
+  "name": "ProductPagePOC",
+  "version": "0.0.1",
+  "description": "ProductPagePOC",
+  "dependencies": {
+    "pure": "~0.6.0",
+    "jquery": "~2.1.4",
+    "react": "~0.13.3",
+    "font-awesome": "~4.3.0"
+  }
+}
