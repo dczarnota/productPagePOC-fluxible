@@ -13,6 +13,7 @@ var log = require('./Utils/logger');
 var reqLogger = require('morgan');
 
 var serialize = require('serialize-javascript');
+var favicon = require('serve-favicon');
 var React = require('react');
 var navigateAction = require('flux-router-component').navigateAction;
 var app = require('./app');
@@ -24,6 +25,7 @@ var server = express();
 var port = process.env.PORT || 8000;
 
 server.use(reqLogger('dev'));
+server.use(favicon(__dirname + '/favicon.ico'));
 server.set('views', path.join(__dirname,'./views'));
 server.engine('handlebars', exphbs({ defaultLayout: 'main'}));
 
