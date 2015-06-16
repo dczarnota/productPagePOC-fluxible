@@ -14,7 +14,7 @@ var routrPlugin = require('fluxible-plugin-routr');
  */
 
 var app = new Fluxible({
-  component: React.createFactory(require('./Components/pp_pageApp.react'))
+  component: React.createFactory(require('./Components/pp_pageApp.react.jsx'))
 });
 
 app.plug(fetchrPlugin());

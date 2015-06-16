@@ -1,8 +1,8 @@
 /** @jsx React.DOM */
 var React = require('react');
-var Title = require('./pp_TitleComponent.react');
-var Hero = require('./pp_heroComponent.react');
-var RightComponent = require('./rightComponent.react');
+var Title = require('./pp_TitleComponent.react.jsx');
+var Hero = require('./pp_heroComponent.react.jsx');
+var RightComponent = require('./rightComponent.react.jsx');
 // var skinnyBannerComponent= require('./skinnyBannerComponent.react');
 var FluxibleMixin = require('fluxible').Mixin;
 var ProductStore = require('../stores/productStore');
@@ -37,9 +37,9 @@ var pp_pageApp = React.createClass({
     };
 	},
 
-	addToCart: function(e) {
-		e.preventDefault();
-		console.log('click');
+	addToCart: function() {
+		// e.preventDefault();
+		console.log('addToCart click');
 		return false;
 	},
 
@@ -57,5 +57,10 @@ var pp_pageApp = React.createClass({
 	}
 
 });
-
+			// <div id="pageApp">
+			// 	<div id="skinnyBanner"></div>
+			// 	<Title titleData={this.state.data.title}></Title>
+			// 	<Hero heroData={this.state.data.hero}></Hero>
+			// 	<RightComponent priceData={this.state.data.price} addToCart={this.addToCart}></RightComponent>
+			// </div>
 module.exports = pp_pageApp;

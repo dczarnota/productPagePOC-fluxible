@@ -87,7 +87,7 @@ var browserify = require('browserify');
  
 gulp.task('scripts', function () {
 
-    gulp.src(['./resources/js/app.js'])
+    gulp.src(['./client.js'])
         .pipe(browserify({
             transform: [ 'reactify' ]
         }))
@@ -97,7 +97,7 @@ gulp.task('scripts', function () {
 
 gulp.task('browserify', function() {
     var bundler = browserify({
-        entries: ['./resources/js/app.js'], // Only need initial file, browserify finds the deps
+        entries: ['./client.js'], // Only need initial file, browserify finds the deps
         transform: [reactify], // We want to convert JSX to normal javascript
         debug: true, // Gives us sourcemapping
         cache: {}, packageCache: {}, fullPaths: true // Requirement of watchify
@@ -111,7 +111,7 @@ gulp.task('browserify', function() {
         watcher.bundle() // Create new bundle that uses the cache for high performance
          .pipe(source('bundle.js'))
          .pipe(buffer()) // <----- convert from streaming to buffered vinyl file object
-         .pipe(uglify()) 
+         // .pipe(uglify()) 
     // This is where you add uglifying etc.
         .pipe(gulp.dest('./public/js'));
         console.log('Updated!', (Date.now() - updateStart) + 'ms');
@@ -120,7 +120,7 @@ gulp.task('browserify', function() {
     // Create the initial bundle when starting the task
     .pipe(source('bundle.js'))
     .pipe(buffer()) // <----- convert from streaming to buffered vinyl file object
-    .pipe(uglify()) 
+    // .pipe(uglify()) 
     .pipe(gulp.dest('./public/js'));
 });
 

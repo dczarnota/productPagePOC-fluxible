@@ -1,17 +1,14 @@
 /** @jsx React.DOM */
 var React = require('react');
-var FramingOptions= require('./framingOptions.react');
-var PriceComnponent = require('./priceComponent.react');
-var StaticTextComponent = require('./staticTextComponent.react');
-var AddTocart_SaveToGal_Component = require('./addTocart_SaveToGal_Component.react');
-var Helpline_Chat_Component = require('./helpline_Chat_Component.react');
+var FramingOptions= require('./framingOptions.react.jsx');
+var PriceComnponent = require('./priceComponent.react.jsx');
+var StaticTextComponent = require('./staticTextComponent.react.jsx');
+var AddTocart_SaveToGal_Component = require('./addTocart_SaveToGal_Component.react.jsx');
+var Helpline_Chat_Component = require('./helpline_Chat_Component.react.jsx');
 var rightComponent = React.createClass({
 
 	render: function() {
 		var priceData = this.props.priceData;
-
-		console.log('rightComponent: ',this.props.addToCart);
-
 		return (
 			<div className="rightComponent pure-u-1 pure-u-md-2-5 pure-u-sm-2-5">
 				<div className="rightComponentContainer pure-g">

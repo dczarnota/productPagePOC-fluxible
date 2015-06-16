@@ -25,11 +25,9 @@ var ProductStore = createStore({
     return this.products;
   },
 
-  // addToCart: function(item){
-  //   this.cart.push(item);
-  //   console.log('ProductStore addToCart cart: ', this.cart);
-  //   this.emitChange();
-  // },
+  addToCart: function(){
+    console.log('ProductStore addToCart');
+  },
 
   /*
    * Update the store's internal state with the payload from an action.
@@ -56,12 +54,14 @@ var ProductStore = createStore({
    * More explanation in server/index
    */
   dehydrate: function () {
+    console.log('dehydrate');
     return {
       products: this.products,
       cart: this.cart
     };
   },
   rehydrate: function (state) {
+    console.log('rehydrate');
     this.products = state.products;
     this.cart = state.cart;
   }

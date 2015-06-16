@@ -166,11 +166,12 @@ module.exports = {
           htmlTitle: results.seoData[1].Value,
           metaTags: metaTags
         };
+        // console.log('apiData.metaTags: ',apiData.metaTags)
         // console.log('apiData: ', apiData);
         // res.render()
         // console.log('callback: ',callback)
 
-        callback(null, apiData, metaTags);
+        callback(null, apiData);
       });
   }
 };

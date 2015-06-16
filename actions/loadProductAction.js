@@ -16,14 +16,13 @@ module.exports = function (context, payload, done) {
      * in callback. If the call succeeded, resolve the promise passing in
      * the server payload. Otherwise, reject the promise with the error.
      */
-    context.service.read('productService', {}, {}, function(err, results, meta) {
+    context.service.read('productService', {}, {}, function(err, results) {
       if (err) { 
         reject(err);
       }
       // console.log('action: ',results);
       // console.log('')
-      // console.log ('meta: ',meta)
-      resolve(results, meta);
+      resolve(results);
     });
 
   });
@@ -35,7 +34,7 @@ module.exports = function (context, payload, done) {
      * Dispatch a named event to all stores registered to handle this
      * specific event, passing along the action's payload.
      */
-
+     // console.log('loadProductAction: ',product)
     context.dispatch('RECEIVE_PRODUCT_SUCCESS', product);
     done();
   }).catch(function (err) {

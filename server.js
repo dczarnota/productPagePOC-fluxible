@@ -81,7 +81,7 @@ server.use(function(req, res){
      * which will be rendered as JavaScript to create an App variable on
      * the global window object.
      */
-     var exposed = "window.App=" + serialize(app.dehydrate(context)) + ';';
+     var exposed = serialize(app.dehydrate(context));
 
      // Application's root component defined in app.js
      var Component = app.getComponent();
@@ -103,28 +103,26 @@ server.use(function(req, res){
      console.log('navigateAction no error')
 
      // console.log('metaTags: ', app.dehydrate(context).context.dispatcher.stores.ProductStore.products.metaTags);
-     console.log('')
 
-     var metaTags = app.dehydrate(context).context.dispatcher.stores.ProductStore.products.metaTags;
+     var productData = app.dehydrate(context).context.dispatcher.stores.ProductStore.products;
+     // console.log('productData: ', productData);
 
-     var markup = React.renderToStaticMarkup(
+     var markup = React.renderToString(
         Component({
-          context: context.getComponentContext(),
-          htmlTag: metaTags[0],
-          title: metaTags[1]
+          context: context.getComponentContext()
       })
      );
-
 
      // console.log('html: ',html)
      // Render
      // res.send(html);
 
      res.render('product', {
-       htmlTag: metaTags[0],
-       title: metaTags[1],
-       metaTags: metaTags,
-       markup: markup
+       htmlTag: productData.htmlTag,
+       title: productData.htmlTitle,
+       metaTags: productData.metaTags,
+       markup: markup,
+       state: exposed
      });
 
   });
