@@ -44,6 +44,7 @@ var fetchrPlugin = app.getPlugin('FetchrPlugin');
 
 // Register our REST services with fetchr
 fetchrPlugin.registerService(require('./services/productService'));
+fetchrPlugin.registerService(require('./services/promoService'));
 
 // Set up the fetchr server middleware
 server.use(fetchrPlugin.getXhrPath(), fetchrPlugin.getMiddleware());
@@ -69,7 +70,7 @@ server.use(function(req, res){
       console.log('navigateAction err: ', err);
       return;
     }
-
+    console.log('check server.js');
     /*
      * Exposing your app's server-rendered state so React can re-initialize
      * client-side on top of the existing DOM.
@@ -123,7 +124,6 @@ server.use(function(req, res){
        markup: markup,
        state: exposed
      });
-
   });
 });
 

@@ -61,6 +61,7 @@ var ProductStore = createStore({
    */
 
   updateProduct: function(payload) {
+    console.log('updateProduct()');
     this.products = payload;
     this.emitChange();
    },

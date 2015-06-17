@@ -158,6 +158,10 @@ module.exports = {
         //   markup: markup
         // });
 
+         // var promoData = results.promoData;
+         // promoData.DiscountExpirationDt = new Date(parseInt(promoData.DiscountExpirationDt.split("/Date(").pop().split(")/")[0]));
+         // promoData.DiscountExpirationDt = (promoData.DiscountExpirationDt.getMonth() + 1) + "/" + promoData.DiscountExpirationDt.getDate() + "/" + promoData.DiscountExpirationDt.getFullYear().toString().substr(2, 2);
+
         var apiData = {
           title: titleData,
           hero: herodata,
@@ -167,7 +171,7 @@ module.exports = {
           metaTags: metaTags
         };
         // console.log('apiData.metaTags: ',apiData.metaTags)
-        // console.log('apiData: ', apiData);
+        console.log('done');
         // res.render()
         // console.log('callback: ',callback)
 

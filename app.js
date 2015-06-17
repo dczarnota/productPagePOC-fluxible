@@ -21,6 +21,7 @@ app.plug(fetchrPlugin());
 
 app.plug(routrPlugin({ routes: require('./Routes/routes') }));
 
-app.registerStore(require('./stores/productStore'));
+app.registerStore(require('./stores/productStore.js'));
+app.registerStore(require('./stores/promoStore.js'));
 
 module.exports = app;
