@@ -13,7 +13,7 @@ var ProductStore = createStore({
    */
   handlers: {
     'RECEIVE_PRODUCT_SUCCESS': 'updateProduct',
-    'ADD_TO_CART': 'addToCart'
+    'ADD_TO_CART': 'addItemToCart'
   },
 
   initialize: function () {
@@ -25,8 +25,29 @@ var ProductStore = createStore({
     return this.products;
   },
 
-  addToCart: function(){
-    console.log('ProductStore addToCart');
+  addItemToCart: function(){
+    console.log('ProductStore addItemToCart()');
+
+    // Add current product data to cart
+    this.cart = this.products;
+
+    // Get current item count from cart header (string format)
+    var currentCartCount = document.getElementById('HeaderCartCount').innerHTML;
+
+    // Convert string to array and split the array
+    var countArray = currentCartCount.split(' ');
+
+    // This is the number of items in the cart
+    var itemCount = parseInt(countArray[2]);
+
+    // Increment to reflect user action
+    itemCount++;
+
+    // Prepare HTML string with updated cart count
+    var updatedHTML = ' ( ' + itemCount.toString() + ' ) ';
+
+    // Reset the innerHTML to the updatedHTML
+    document.getElementById('HeaderCartCount').innerHTML = updatedHTML;
   },
 
   /*

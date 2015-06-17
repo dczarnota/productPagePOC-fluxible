@@ -3,7 +3,7 @@ var React = require('react');
 var Title = require('./pp_TitleComponent.react.jsx');
 var Hero = require('./pp_heroComponent.react.jsx');
 var RightComponent = require('./rightComponent.react.jsx');
-// var skinnyBannerComponent= require('./skinnyBannerComponent.react');
+var skinnyBannerComponent= require('./skinnyBannerComponent.react.jsx');
 var FluxibleMixin = require('fluxible').Mixin;
 var ProductStore = require('../stores/productStore');
 
@@ -16,7 +16,7 @@ var pp_pageApp = React.createClass({
 	 * listening to, it will execute the onChange handler function.
 	 */
 	// statics: {
-	//     storeListeners: [ ProductStore ]
+ //    storeListeners: [ ProductStore ]
 	// },
 
 	/*
@@ -37,30 +37,17 @@ var pp_pageApp = React.createClass({
     };
 	},
 
-	addToCart: function() {
-		// e.preventDefault();
-		console.log('addToCart click');
-		return false;
-	},
-
 	render: function() {
-		// console.log('pp_pageApp context: ',this.context);
-
 		return (
 			<div id="pageApp">
-				<div id="skinnyBanner"></div>
+				<skinnyBannerComponent promoData={this.state.data.promoData}></skinnyBannerComponent>
 				<Title titleData={this.state.data.title}></Title>
 				<Hero heroData={this.state.data.hero}></Hero>
-				<RightComponent priceData={this.state.data.price} addToCart={this.addToCart}></RightComponent>
+				<RightComponent priceData={this.state.data.price}></RightComponent>
 			</div>
 		);
 	}
 
 });
-			// <div id="pageApp">
-			// 	<div id="skinnyBanner"></div>
-			// 	<Title titleData={this.state.data.title}></Title>
-			// 	<Hero heroData={this.state.data.hero}></Hero>
-			// 	<RightComponent priceData={this.state.data.price} addToCart={this.addToCart}></RightComponent>
-			// </div>
+
 module.exports = pp_pageApp;

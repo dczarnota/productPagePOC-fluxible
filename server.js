@@ -86,7 +86,6 @@ server.use(function(req, res){
      // Application's root component defined in app.js
      var Component = app.getComponent();
 
-
      /*
      * Render our React application to basic HTML. This function adds
      * data-reactid attributes to each DOM node for the client to reconcile.

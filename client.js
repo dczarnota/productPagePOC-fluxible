@@ -11,8 +11,6 @@ var dehydratedState = JSON.parse(document.getElementById('initial-state').innerH
 
 // console.log('dehydratedState: ',dehydratedState);
 
-console.log('check here')
-
 app.rehydrate(dehydratedState, function(err, context){
   if(err){
     console.log('app.rehydrate err: ',err)
@@ -20,7 +18,7 @@ app.rehydrate(dehydratedState, function(err, context){
   }
 
   // window.context = context;
-  var mountNode = document.getElementById('pageApp');
+  var mountNode = document.getElementById('main-body');
   var Component = app.getComponent();
 
   React.render(
